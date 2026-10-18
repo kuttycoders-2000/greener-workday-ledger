@@ -131,7 +131,7 @@ function Home() {
             <div className="mt-3 flex items-center gap-3">
               <span className="grid size-11 place-items-center rounded-xl bg-secondary text-secondary-foreground"><Icon className="size-5" /></span>
               <div className="flex-1">
-                <p className="font-semibold capitalize">{MODE_LABEL[t.mode as Mode]} · {Number(t.distance_km)} km</p>
+                <p className="font-semibold first-letter:uppercase">{MODE_LABEL[t.mode as Mode]} · {Number(t.distance_km)} km</p>
                 <p className="text-sm text-muted-foreground">{new Date(t.date).toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "short" })} · {fmtKg(Number(t.co2_kg))} kg CO2e</p>
               </div>
             </div>
@@ -165,7 +165,7 @@ function Home() {
               return (
                 <li key={t.id} className="flex items-center gap-3 p-3">
                   <Icon className="size-5 text-muted-foreground" />
-                  <span className="flex-1 text-sm capitalize">{MODE_LABEL[t.mode as Mode]} · {Number(t.distance_km)} km</span>
+                  <span className="flex-1 text-sm first-letter:uppercase">{MODE_LABEL[t.mode as Mode]} · {Number(t.distance_km)} km</span>
                   <span className="text-xs text-muted-foreground">{new Date(t.date).toLocaleDateString("en-IN", { day: "numeric", month: "short" })}</span>
                   <span className="w-16 text-right text-sm font-semibold">{fmtKg(Number(t.co2_kg))} kg</span>
                 </li>
